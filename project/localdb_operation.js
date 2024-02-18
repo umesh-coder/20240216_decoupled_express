@@ -1,7 +1,6 @@
 /**
  * @const express
  * Importing Express
- *
  */
 
 const express = require("express");
@@ -268,7 +267,7 @@ app.post("/orders", (req, res) => {
 
   const productId = parseInt(body.productId);
 
-  orders.push(body);
+ 
 
   //Searching th id
   const index = products.findIndex(
@@ -304,7 +303,17 @@ app.post("/orders", (req, res) => {
     }
   );
 
-  console.log("\n\n Product Stock updated successfully Stock : " + products[index].stock + "\n\n")
+  console.log(
+    "\n\n Product Stock updated successfully Stock : " +
+      products[index].stock +
+      "\n\n"
+  );
+
+  body.totalcost = products[index].price * parseInt(body.quantity);
+
+  console.log("\n\n total cost : " + body.totalcost + "\n\n");
+
+  orders.push(body);
 
   fs.writeFileSync(
     "./database/orders.json",
@@ -314,7 +323,7 @@ app.post("/orders", (req, res) => {
     }
   );
   return res.json({
-    status: "Post Sucesss ",
+    status: "Order Sucesss ",
     id: Math.floor(Math.random() * 9000000000) + 1000000000,
   });
 });
