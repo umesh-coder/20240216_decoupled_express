@@ -2,10 +2,11 @@
 const mongoose = require("mongoose");
 
 const orders = new mongoose.Schema({
-    productId: Number,
+    productId: String,
+    title: String,
     quantity: Number,
     address: String,
-    contactNo: String,
+    contactNo: Number,
     date: Date,
     status: String,
     totalCost: Number

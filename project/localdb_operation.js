@@ -259,13 +259,13 @@ app.put("/orders/update/:id", (req, res) => {
 
 //create Order
 
-app.post("/orders", (req, res) => {
+app.post("/orders/:productId", (req, res) => {
   const body = req.body;
   console.log("body:-", body);
   body.id = Math.floor(Math.random() * 9000000000) + 1000000000;
   body.date = new Date().toLocaleString();
 
-  const productId = parseInt(body.productId);
+  const productId = parseInt(req.params.productId);
 
  
 
