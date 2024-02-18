@@ -1,0 +1,25 @@
+{
+  "name": "express_commerce",
+  "version": "0.0.1",
+  "description": "Demonstrate E-Commerce Product & Order CURD Operations ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "Product",
+    "Order",
+    "Express",
+    "E-Commerce"
+  ],
+  "author": "Umesh Shelare",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
