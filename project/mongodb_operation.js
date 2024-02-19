@@ -10,13 +10,22 @@ const mongoose = require("mongoose");
 
 // const { MongoClient } = require("mongodb");
 
-const uri =
-  "mongodb+srv://umeshshelare:ecommerce123@ecommerce.vzjccrg.mongodb.net/ecommerce?retryWrites=true&w=majority";
+const uri ="mongodb+srv://umeshshelare:ecommerce123@ecommerce.vzjccrg.mongodb.net/ecommerce?retryWrites=true&w=majority";
 
 //middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-mongoose.connect(uri);
+
+
+
+if(mongoose.connect(uri)){
+
+  console.log('MongoDB connected Sucessfully....')
+
+}else{
+
+  console.log('MongoDB is not connected.')
+}
 
 const products = require("./models/products");
 const orders = require("./models/orders");
@@ -26,6 +35,7 @@ const PORT = 8000;
 
 
 //print all products
+
 
 app.get("/product", async (req, res) => {
 
@@ -243,6 +253,9 @@ app.put("/orders/update/:id", async (req, res) => {
   }
 });
 
+
+
+
 // // Delete Order (DELETE)
 app.delete("/orders/delete/:id", async (req, res) => {
   try {
@@ -267,7 +280,6 @@ app.delete("/orders/delete/:id", async (req, res) => {
 
 
 //print all orders
-
 app.post("/order", async (req, res) => {
 
   const orderslist = await orders.find();
@@ -278,5 +290,8 @@ app.post("/order", async (req, res) => {
 
 
 http.listen(PORT, () => {
-  console.log("Server is ruuning");
+  console.log("Mongo Database is Live",{PORT});
 });
+
+
+

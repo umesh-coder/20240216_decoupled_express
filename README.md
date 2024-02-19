@@ -7,5 +7,3 @@ Functionality:
 2.CRUD Proudct
 3.CRUD Order
 
-**By Using Both Local DB as Well as MongoDB**
-

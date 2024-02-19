@@ -26,6 +26,7 @@ const orders = require("./database/orders.json");
 //middleware
 app.use(express.urlencoded({ extended: false }));
 
+app.use(express.json());
 //Routes
 
 //Routes to print products
@@ -148,15 +149,13 @@ app.post("/products", (req, res) => {
     "./database/products.json",
     JSON.stringify(products),
     (err, data) => {
-      return res.json({ status: "Post Sucesss ", id: products.length });
+      return res.json({ status: "Product Added Sucessfully", id: products.length });
     }
   );
-  return res.json({ status: "Post Sucesss ", id: products.length });
+  return res.json({ status: "Product Added Sucessfully", id: products.length });
 });
 
-app.listen(PORT, () => {
-  console.log("Server is Live ", { PORT });
-});
+
 
 app
   .route("/products/:id")
@@ -259,7 +258,7 @@ app.put("/orders/update/:id", (req, res) => {
 
 //create Order
 
-app.post("/orders/:productId", (req, res) => {
+app.post("/orders", (req, res) => {
   const body = req.body;
   console.log("body:-", body);
   body.id = Math.floor(Math.random() * 9000000000) + 1000000000;
@@ -275,7 +274,7 @@ app.post("/orders/:productId", (req, res) => {
   );
 
   if (index === -1) {
-    return res.status(404).json({ error: "Product not found" });
+    return res.status(200).json({ message: "Product added sucessfully" });
   }
 
   console.log("product id : " + index);
@@ -296,9 +295,7 @@ app.post("/orders/:productId", (req, res) => {
         return res.status(500).json({ error: "Internal server error" });
       }
 
-      return res.json({
-        status: "Product Stock updated successfully",
-        prduct: products[index],
+      return res.json({status: "Product Stock updated successfully",prduct: products[index],
       });
     }
   );
@@ -354,4 +351,8 @@ app.delete("/orders/delete/:id", (req, res) => {
 
 app.post("/order", (req, res) => {
   return res.json(orders);
+});
+
+app.listen(PORT, () => {
+  console.log("Local Database is Live ", { PORT });
 });

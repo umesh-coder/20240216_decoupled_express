@@ -1,0 +1,179 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "localdb_operations",
+    "dateExported": "2024-02-19T07:15:04.909Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "aea9c8e7-f47b-4a09-8992-bf884526bb38",
+            "colId": "3b474020-7325-4da9-b37d-5f4f5ffa3af7",
+            "containerId": "",
+            "name": "get all products",
+            "url": "http://localhost:8000/products",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-19T07:13:07.724Z",
+            "modified": "2024-02-19T07:13:07.724Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b33d6093-29b9-454e-be6e-499672163806",
+            "colId": "3b474020-7325-4da9-b37d-5f4f5ffa3af7",
+            "containerId": "",
+            "name": "search product by name",
+            "url": "http://localhost:8000/products/search/ball",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-19T07:13:07.725Z",
+            "modified": "2024-02-19T07:13:07.725Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "72ab328f-1d2f-4a48-8875-e3d0efa0fc69",
+            "colId": "3b474020-7325-4da9-b37d-5f4f5ffa3af7",
+            "containerId": "",
+            "name": "add product",
+            "url": "http://localhost:8000/products/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-19T07:13:07.726Z",
+            "modified": "2024-02-19T07:13:07.726Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"title\": \"iPhone 20\",\n    \"description\": \"An apple mobile which is nothing like apple\",\n    \"price\": 549,\n    \"discountPercentage\": 12.96,\n    \"rating\": 4.69,\n    \"stock\": 94,\n    \"brand\": \"Apple\",\n    \"category\": \"smartphones\",\n    \"thumbnail\": \"https://cdn.dummyjson.com/product-images/1/thumbnail.jpg\",\n    \"images\": []\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9d4cbfb6-99f0-4cda-82e6-e5ef51b37519",
+            "colId": "3b474020-7325-4da9-b37d-5f4f5ffa3af7",
+            "containerId": "",
+            "name": "update product",
+            "url": "http://localhost:8000/products/30",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-19T07:13:07.727Z",
+            "modified": "2024-02-19T07:13:07.727Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"title\": \"iPhone 25\",\n    \"description\": \"An apple mobile which is nothing like apple\",\n    \"price\": 5490,\n    \"discountPercentage\": 12.96,\n    \"rating\": 4.69,\n    \"stock\": 94,\n    \"brand\": \"Apple\",\n    \"category\": \"smartphones\",\n    \"thumbnail\": \"https://cdn.dummyjson.com/product-images/1/thumbnail.jpg\",\n    \"images\": []\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "603456ba-0314-4d9e-978e-4135ec6e8aaf",
+            "colId": "3b474020-7325-4da9-b37d-5f4f5ffa3af7",
+            "containerId": "",
+            "name": "delete product",
+            "url": "http://localhost:8000/products/30",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-19T07:13:07.728Z",
+            "modified": "2024-02-19T07:13:07.728Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"title\": \"iPhone 11\",\n    \"description\": \"An apple mobile which is nothing like apple\",\n    \"price\": 5490,\n    \"discountPercentage\": 12.96,\n    \"rating\": 4.69,\n    \"stock\": 94,\n    \"brand\": \"Apple\",\n    \"category\": \"smartphones\",\n    \"thumbnail\": \"https://cdn.dummyjson.com/product-images/1/thumbnail.jpg\",\n    \"images\": []\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5bf35ba9-5239-4f7c-b29b-8854a0e1f442",
+            "colId": "3b474020-7325-4da9-b37d-5f4f5ffa3af7",
+            "containerId": "",
+            "name": "search order by id",
+            "url": "http://localhost:8000/orders/25",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-02-19T07:13:07.729Z",
+            "modified": "2024-02-19T07:13:07.729Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"title\": \"iPhone 11\",\r\n    \"description\": \"An apple mobile which is nothing like apple\",\r\n    \"price\": 5490,\r\n    \"discountPercentage\": 12.96,\r\n    \"rating\": 4.69,\r\n    \"stock\": 94,\r\n    \"brand\": \"Apple\",\r\n    \"category\": \"smartphones\",\r\n    \"thumbnail\": \"https://cdn.dummyjson.com/product-images/1/thumbnail.jpg\",\r\n    \"images\": []\r\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d1ddc1b6-0a06-4ae6-9725-95212f0c5387",
+            "colId": "3b474020-7325-4da9-b37d-5f4f5ffa3af7",
+            "containerId": "",
+            "name": "placed order ",
+            "url": "http://localhost:8000/orders/",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-02-19T07:13:07.730Z",
+            "modified": "2024-02-19T07:13:07.730Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"productId\": \"33\",\n  \"quantity\": \"1\",\n  \"address\": \"kp hyd\",\n  \"contactNo\": \"1234567855699\",\n  \"status\": \"pending\",\n  \"totalcost\": 710\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0a59c3e2-05f4-46cc-ad1a-f390fbe05210",
+            "colId": "3b474020-7325-4da9-b37d-5f4f5ffa3af7",
+            "containerId": "",
+            "name": "update order by order id",
+            "url": "http://localhost:8000/order",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-02-19T07:13:07.731Z",
+            "modified": "2024-02-19T07:13:07.731Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"productId\": \"33\",\n    \"quantity\": \"4\",\n    \"address\": \"kp hyd\",\n    \"contactNo\": \"1234567855699\",\n    \"status\": \"delivered\",\n    \"totalcost\": 710\n  }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8d89ad9f-f323-4aed-bb79-23d996e49e77",
+            "colId": "3b474020-7325-4da9-b37d-5f4f5ffa3af7",
+            "containerId": "",
+            "name": "delete order by order id",
+            "url": "http://localhost:8000/orders/delete/4728450343",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-02-19T07:13:07.732Z",
+            "modified": "2024-02-19T07:13:07.732Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c6dcbff8-2897-44a1-ae78-5df76fadc179",
+            "colId": "3b474020-7325-4da9-b37d-5f4f5ffa3af7",
+            "containerId": "",
+            "name": "display orders list",
+            "url": "http://localhost:8000/order",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-02-19T07:13:07.733Z",
+            "modified": "2024-02-19T07:13:07.733Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
